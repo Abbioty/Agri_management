@@ -1,0 +1,72 @@
+{% extends 'base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+  <div class="row">
+      <div class="col l2 hide-on-med-and-down" >
+        <div class="cat-body">
+        <h4 class="flow-text white-text center" id="cat-head">All categories</h4>
+        </div>
+           <div class="cat-body" id="cat-body">
+             <div>
+             <a class="waves-effect waves-light btn-large green " id="btn">Mechinaries</a>
+             </div>
+             <br> <br> <br>
+             <div>
+             <a class="waves-effect waves-light btn-large green" id="btn-body">Seeds</a>
+             </div>
+             <br> <br> <br>
+             <div>
+             <a class="waves-effect waves-light btn-large green" id="btn-bod">Exchange</a>
+             </div>
+             <br> <br> <br>
+        </div>
+      </div>
+
+ <!-- container start for product details -->
+      <div class=" container white" id="details-con">
+          <div class="row">
+          <div class="col l3 center show-on-large">
+
+              <!-- product_detatils_images goes here -->
+               <div class="card" id="img-resp">
+            <div class="card-image">
+              <img src="{{product.image.url}}" height="300px">
+                <span class="black-text text-darken-2 product-title">{{product.name}}</span>
+            </div>
+          </div>
+          <!-- ------images ends here ------>
+          </div>
+
+              <!-- devider goes here -->
+
+               <div class="divider"></div>
+
+          <!-- product_details_text begins ----->
+
+            <div class="col l6 show-on-large">
+                <div class="card-content " id="img-resp2">
+              <p>{{product.details}}</p>
+            </div>
+<br>
+                  <div class="divider"></div>
+              <br><br><br>
+
+              <span><h4 class="black-text" id="img-resp3">₦ {{product.price}}</h4> </span>
+
+             <div class="card-action" id="img-resp4">
+              <a class="waves-effect z-depth-3 waves-light btn-large lighten blue">Add to cart</a>
+            </div>
+            </div>
+
+      </div>
+          <!-- row class ends here -->
+      </div>
+{% endblock%}
+</body>
+</html>

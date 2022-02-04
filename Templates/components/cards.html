@@ -1,0 +1,22 @@
+
+{% for product in products %}
+<div class="row">
+        <div class="col s12 m4 l4">
+          <div class="card">
+            <div class="card-image">
+              <img src="{{product.image.url}}" width="100px" height="250px">
+            </div>
+            <div class="card-content">
+                <span class="black-text text-darken-2 product-title"><h6>{{product.name}}</h6></span>
+              <h5>₦ {{product.price}}</h5>
+            </div>
+            <div class="card-action">
+              <a class="waves-effect waves-light btn lighten blue">Add to cart</a>
+               <a href="{{ product.get_absolute_url }}" class="waves-effect waves-light btn lighten green right">View </a>
+            </div>
+          </div>
+        </div>
+  {% endfor %}
+      </div>
+
+

@@ -1,0 +1,21 @@
+
+{% for exchange in exchanges %}
+<div class="row">
+        <div class="col s12 m4 l4">
+          <div class="card">
+            <div class="card-image">
+              <img src="{{exchange.image.url}}" width="100px", height="250px">
+            </div>
+            <div class="card-content" id="img-resp3">
+                 <span><h6 class="black-text">{{exchange.quantity}} {{exchange.name}}</h6> </span>
+              <span><h5 class="black-text">₦ {{exchange.price}}</h5> </span>
+            </div>
+            <div class="card-action center">
+              <a class="waves-effect waves-light btn-large lighten blue">Details</a>
+            </div>
+          </div>
+        </div>
+  {% endfor %}
+      </div>
+
+
