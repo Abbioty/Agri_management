@@ -15,7 +15,7 @@ class Exchange(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('Exchange_detail', args=[self.slug],)
+        return reverse('exchange_detail', args=[self.slug],)
 
 
 

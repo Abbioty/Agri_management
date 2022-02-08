@@ -19,9 +19,12 @@ from django.urls import path, include
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', include('Agric_store.urls')),
+    path('accounts/', include('allauth.urls')),
     path('Exchange/', include('Exchange.urls')),
+    path('machinaries/', include('machinaries.urls')),
+    path('seeds/', include('seeds.urls')),
     path('admin/', admin.site.urls),
+    path('', include('Agric_store.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -15,3 +15,4 @@ def product_detail(request, product_slug):
     product = get_object_or_404(Product, slug=product_slug)
     context = {'product': product}
     return render(request, 'Products/product_detail.html', context)
+
